@@ -67,7 +67,10 @@ function App() {
         <p>
         A simple calculator to determine your 1 repetition max lift
         </p>
-        ReactJS by <a href="https://www.linkedin.com/in/markorskip/">Skip Sorenson</a> <br/>
+        <p>
+        Simple ReactJS app by <a href="https://www.linkedin.com/in/markorskip/">Skip Sorenson</a><br/>
+        <a href="https://github.com/skipsorenson/strong-calc">Source code located here</a>
+        </p>
         <p>Estimate your 1 rep max</p>
         <Calculator name="Bench Press"/>
         <Calculator name="Deadlift"/>
