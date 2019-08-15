@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
-import './App.css';
+// import './App.css';
 
 
 
@@ -22,23 +22,36 @@ class Calculator extends React.Component {
 
     render() {
         return (
-            <div className="Calculator">
-                <label className="exerciseName">{ this.props.name } </label> <br/>
+            <div className="card">
 
-                <label htmlFor="weight">Weight: </label>
-
-                <input type="text"
+                <div className="card-header">{ this.props.name }
+                </div>
+                <div className="card-body">
+                    <div className="form-row">
+                        <div class="col">
+                        <label htmlFor="weight">Weight: </label>
+                        <input type="text"
+                               id="weight"
                                name="weight"
                                value={this.state.weight}
                                onChange={this.handleChange}
-            />
-                <label htmlFor="weight">Repetitions: </label>
-                <input type="text"
-                             name="reps"
-                             value={this.state.reps}
-                             onChange={this.handleChange}
-                             />
-                Estimated 1 Rep Max: <Estimate weight={this.state.weight} reps={this.state.reps}/>
+                    />
+                        </div>
+                        <div className="col">
+                        <label htmlFor="reps">Repetitions: </label>
+                        <input type="text"
+                               id="reps"
+                               name="reps"
+                               value={this.state.reps}
+                               onChange={this.handleChange}
+                                     />
+                        </div>
+                    </div>
+                </div>
+                <div className="card-body">
+                    <h5 className="card-title"> Estimated 1 Rep Max: <Estimate weight={this.state.weight} reps={this.state.reps}/></h5>
+                </div>
+
             </div>
         )
     }
@@ -54,9 +67,12 @@ class Estimate extends React.Component {
 
 function App() {
   return (
-    <div className="App">
-        Strong Calc! <br/>
-        ReactJS by Skip Sorenson <br/>
+    <div className="App container">
+        <h1>Strong Calc</h1>
+        <p>
+        A simple calculator to determine your 1 repetition max lift
+        </p>
+        ReactJS by <a href="https://www.linkedin.com/in/markorskip/">Skip Sorenson</a> <br/>
         <p>Estimate your 1 rep max</p>
         <Calculator name="Bench Press"/>
         <Calculator name="Deadlift"/>
