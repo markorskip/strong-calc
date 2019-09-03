@@ -57,7 +57,6 @@ function Exercise(name) {
 }
 
 class App extends React.Component {
-
     constructor(props) {
         super(props)
         this.state = {
@@ -70,10 +69,8 @@ class App extends React.Component {
     }
 
     handleChange = (object, event) => {
-
         let exercises = this.state.exercises;
         let total = 0
-
         if (!isNaN(event.target.value)) {
             for (var key in exercises) {
                 for (var attr in exercises[key]) {
@@ -81,16 +78,13 @@ class App extends React.Component {
                         console.log("Found it")
                         exercises[key][event.target.name] = event.target.value
                     }
-
                 }
                 total += exercises[key].estimate()
             }
-
             this.setState({
                 exercices: exercises,
                 total: total
             })
-
         }
     }
 
@@ -101,10 +95,8 @@ class App extends React.Component {
         return (
             <div className="container-fluid">
                 <h1>Strong Calc</h1>
-                <p>
-                    <i>A powerlifting calculator that will estimate your 1 rep max
-                        and add the totals.</i>
-                </p>
+                <p><i>A powerlifting calculator that will estimate your 1 rep max
+                        and add the totals.</i></p>
                 <Calculator exercise={this.state.exercises[0]} handleChange={this.handleChange}/>
                 <Calculator exercise={this.state.exercises[1]} handleChange={this.handleChange}/>
                 <Calculator exercise={this.state.exercises[2]} handleChange={this.handleChange}/>
@@ -112,7 +104,8 @@ class App extends React.Component {
 
                 <div className="footer mt-auto py-3">
 
-                    <span class="text-muted">Simple ReactJS app by <a href="https://www.linkedin.com/in/markorskip/">Skip Sorenson</a> </span>
+                    <span class="text-muted">Simple ReactJS app by <a href="https://www.linkedin.com/in/markorskip/">Skip Sorenson</a> </span><br/>
+                    <span className="text-muted"><i>Bug issues to report in either mobile or web versions of this app? <a href="mailto:markorskip@gmail.com">Email here</a></i> </span>
                     {/*<a href="https://github.com/skipsorenson/strong-calc">Source code located here</a>*/}
                 </div>
             </div>
