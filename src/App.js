@@ -104,8 +104,8 @@ class App extends React.Component {
 
                 <div className="footer mt-auto py-3">
 
-                    <span class="text-muted">Simple ReactJS app by <a href="https://www.linkedin.com/in/markorskip/">Skip Sorenson</a> </span><br/>
-                    <span className="text-muted"><i>Bug issues to report in either mobile or web versions of this app? <a href="mailto:markorskip@gmail.com">Email here</a></i> </span>
+                    <span class="text-muted">Simple ReactJS app by <a href="https://www.efficientsoftware.io/">efficientsoftware.io</a> </span><br/>
+                    <span className="text-muted"><i>Bug issues to report in either mobile or web versions of this app? <a href="mailto:support@efficientsoftware.io">Email here</a></i> </span>
                     {/*<a href="https://github.com/skipsorenson/strong-calc">Source code located here</a>*/}
                 </div>
             </div>
